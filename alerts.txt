@@ -1,0 +1,6 @@
+[ALERT] Possible Brute Force Attempts:
+IP: 192.168.1.10 | Failed Attempts: 5
+
+[ALERT] Unusual Night-Time Logins:
+Jan 26 03:02:10 server sshd[12347]: Accepted password for user1 from 192.168.1.12 port 22 ssh2
+Jan 26 01:15:30 server sshd[12353]: Accepted password for user3 from 192.168.1.20 port 22 ssh2
