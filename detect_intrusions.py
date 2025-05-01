@@ -1,3 +1,4 @@
+import json
 import re
 from collections import defaultdict
 
@@ -50,3 +51,16 @@ with open('alerts.txt', 'w') as alert_file:
 
 print("\nAlerts have been saved to alerts.txt")
 
+
+# Prepare JSON structure
+alert_data = {
+    "brute_force_alerts": [],
+    "night_time_logins": []
+}
+
+for ip, count in failed_login_counts.items():
+    if count >= FAILED_LOGIN_THRESHOLD:
+        alert_data["brute_force_alerts"].append({"ip": ip, "failed_attempts": count})
+
+for login in night_logins:
+    alert_data["night_time_logins"].append({"log": login})
