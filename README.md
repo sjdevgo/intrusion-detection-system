@@ -2,6 +2,7 @@
 
 This project simulates a basic log intrusion detection system (IDS) using Python.
 
+
 It analyzes authentication logs (`auth.log`) to detect:
 - Possible brute-force login attacks (many failed login attempts from the same IP)
 - Suspicious night-time login activities (between 00:00–06:00)
